@@ -1,8 +1,8 @@
 <script>
 import Card from "./lib/Card.svelte";
 
-let advice = ""
-let adviceId = null
+let advice = "It is easy to sit up and take notice, what's difficult is getting up and taking and taking action."
+let adviceId = 117
 
 let isRolling = false
 
@@ -20,7 +20,6 @@ const randomQuote = async ()=>{
   }  
 } 
 
-randomQuote()
 </script>
 <main>
   <Card {advice} {adviceId} on:roll="{randomQuote}" rolling={isRolling}/>
