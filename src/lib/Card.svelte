@@ -1,5 +1,6 @@
 <script>
     import dividerMobile from "../assets/images/pattern-divider-mobile.svg"
+    import dividerDesktop from "../assets/images/pattern-divider-desktop.svg"
     import Dice from "./Dice.svelte";
 
     export let advice   
@@ -13,7 +14,8 @@
         <q>{advice}</q>
     </p>
     <div class="divider">
-        <img src="{dividerMobile}" alt="Mobile Divider">
+        <img src="{dividerMobile}" alt="Mobile Divider" class="mobile">
+        <img src="{dividerDesktop}" alt="Desktop Divider" class="desktop">
     </div>
     <div class="dice-wrapper">
         <Dice on:roll {rolling}/>
@@ -27,6 +29,8 @@
         border-radius: 8px;
         text-align: center;
         position: relative;
+        max-width: min-content;
+        margin: auto;
     }
 
     small {
@@ -50,10 +54,21 @@
         margin: auto;
     }
 
-    @media (min-width: 1024px) {
-        .card{
-            max-width: 400px;
-            margin: auto;
-        }
+   .mobile {
+       display: block;    
+   }
+
+   .desktop {
+       display: none;
+   }
+
+   @media (min-width: 1024px) {        
+        .mobile {
+           display: none;
+       }
+
+       .desktop {
+           display: block;
+       }
    }
 </style>
