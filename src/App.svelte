@@ -28,7 +28,7 @@ randomQuote()
 
 <style>
   main{
-    padding: 4rem 1rem;
+    padding: 1rem;
     height: 100vh;
     display: flex;
     justify-content: center;

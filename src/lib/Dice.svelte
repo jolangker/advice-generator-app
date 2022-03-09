@@ -20,13 +20,18 @@
         background-color: var(--neon-green);
         width: 2rem;
         height: 2rem;
-        padding: 1rem;
+        padding: 2rem;
         border-radius: 50%;
         position: relative;
         display: flex;
         justify-content: center;
         align-items: center;          
         cursor: pointer;
+        transition-duration: 300ms;
+    }
+
+    .dice:hover{
+        filter: drop-shadow(0 0 1rem var(--neon-green));
     }
 
     .roll {
